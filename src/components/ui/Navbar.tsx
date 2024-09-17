@@ -4,17 +4,13 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { SunIcon, MoonIcon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { UserButton } from "@clerk/nextjs"; // Ensure you're importing the UserButton from Clerk
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const Links = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
-    { name: "Projects", link: "/projects" },
-    { name: "Experience", link: "/experience" },
-    { name: "Blogs", link: "/blogs" },
+    { name: "About Us", link: "/about" },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);

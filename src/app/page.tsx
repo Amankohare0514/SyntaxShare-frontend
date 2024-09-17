@@ -1,9 +1,10 @@
-import { UserButton } from "@clerk/nextjs";
-import Image from "next/image";
+
+import Hero from "./hero/page";
 
 export default function Home() {
   return (
     <>
+    <Hero/>
     </>
   );
 }
