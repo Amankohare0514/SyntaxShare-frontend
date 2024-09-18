@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
     <nav
       ref={touchRef}
-      className={`${isScrolled && "bg-opacity-[0.5] shadow-md drop-shadow-lg"} font-medium duration-500 bg-opacity-50 transition-all border-b-2 linear z-40 dark:text-white w-[100%] max-w-full mx-auto bg-white dark:bg-transparent ${open && "dark:bg-[#000] bg-opacity-100"} drop-shadow-xs backdrop-blur-sm fixed`}
+      className={`${isScrolled && "bg-opacity-[0.5] shadow-md drop-shadow-lg"} font-medium duration-500 bg-opacity-50 transition-all border-b-2 linear z-40 dark:text-white w-[100%] max-w-full mx-auto bg-white dark:bg-transparent ${open && "dark:bg-[#000] bg-opacity-100"} drop-shadow-xs backdrop-blur-xl fixed`}
     >
       <div className="flex justify-between items-center py-3 md:px-20 px-8">
         <Link href="/">
