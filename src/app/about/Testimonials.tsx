@@ -16,7 +16,7 @@ const Testimonials = () => {
                                 <img alt="testimonial"  src="./image/piyush.webp" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
                                     <span className="flex-grow flex flex-col pl-4">
                                         <span className="title-font font-medium text-gray-800  dark:text-gray-200">Piyush Yadav</span>
-                                        <span className="text-gray-800  dark:text-gray-200 text-sm">Full stack DEVELOPER</span>
+                                        <span className="text-gray-800  dark:text-gray-200 text-sm">Full stack developer</span>
                                     </span>
                             </a>
                         </div>
