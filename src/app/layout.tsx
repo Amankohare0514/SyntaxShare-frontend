@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider, SignedIn, SignedOut, SignIn, UserButton } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +33,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable}`}
         >
-           <ThemeProvider
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
@@ -51,8 +52,9 @@ export default function RootLayout({
               </div>
             </SignedOut>
             <SignedIn>
-              <Navbar/>
+              <Navbar />
               {children}
+              <Footer />
             </SignedIn>
           </ThemeProvider>
         </body>
