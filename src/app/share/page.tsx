@@ -2,22 +2,23 @@
 import React, { useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
 const Share = () => {
-  const { user } = useUser(); 
+  const { user } = useUser();
   const [formData, setFormData] = useState({
-    name: "",
+    name: null as string | null,
     title: "",
     description: "",
-    image: "", 
+    image: "",
   });
-    // Set the user's name from Clerk when the component mounts
-    useEffect(() => {
-      if (user) {
-        setFormData((prevData) => ({
-          ...prevData,
-          name: user.fullName || user.firstName, 
-        }));
-      }
-    }, [user]);
+
+  // Set the user's name from Clerk when the component mounts
+  useEffect(() => {
+    if (user) {
+      setFormData((prevData) => ({
+        ...prevData,
+        name: (user.fullName || user.firstName) as string,
+      }));
+    }
+  }, [user]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -41,9 +42,8 @@ const Share = () => {
       );
       if (response.ok) {
         alert("Post submitted successfully!");
-        // Clear form after successful submission
         setFormData({
-          name: user?.fullName || user?.firstName,
+          name: "",
           title: "",
           description: "",
           image: "",
@@ -80,7 +80,7 @@ const Share = () => {
             value={formData.name}
             onChange={handleChange}
             className="border border-gray-300 rounded-md px-3 py-2 w-full mt-1"
-            disabled 
+            disabled
           />
         </div>
         <div>
