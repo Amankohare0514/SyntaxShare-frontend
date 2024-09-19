@@ -77,7 +77,7 @@ const Share = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
+            value={formData.name ?? ""}
             onChange={handleChange}
             className="border border-gray-300 rounded-md px-3 py-2 w-full mt-1"
             disabled
