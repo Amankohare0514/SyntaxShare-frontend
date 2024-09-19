@@ -1,6 +1,7 @@
 "use client"
 import * as React from 'react';
 import Testimonials from './Testimonials';
+import Link from 'next/link';
 const About = () => {
   return (
     <>
@@ -23,9 +24,11 @@ const About = () => {
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-300">Join the Developer Community
                 </h1>
                 <p className="mb-8 leading-relaxed text-gray-800 dark:text-gray-400">Connect with other developers by sharing your coding journey, collaborating on projects, and learning from the community. Whether you're a beginner or an experienced coder, this platform offers a space to exchange ideas, ask questions, and gain valuable insights to enhance your skills and grow as a developer.</p>
-                <div className="flex justify-center">
-                  <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Lets start sharing</button>
-                </div>
+                <Link href={"/share"}>
+                  <div className="flex justify-center">
+                    <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Lets start sharing</button>
+                  </div>
+                </Link>
               </div>
             </div>
           </section>
