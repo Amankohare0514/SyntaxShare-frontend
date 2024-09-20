@@ -10,7 +10,7 @@ const Share = () => {
     image: "",
   });
 
-  // Set the user's name from Clerk when the component mounts
+
   useEffect(() => {
     if (user) {
       setFormData((prevData) => ({

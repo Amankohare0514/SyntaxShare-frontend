@@ -3,8 +3,18 @@ import React from 'react'
 const ChatSection = () => {
     return (
         <>
+            <div className="flex justify-center items-center">
+                <div className="relative text-center mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+                    <div className="absolute text-2xl font-bold md:text-5xl left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
+                        <span>Top Facts</span>
+                    </div>
+                    <div className="relative text-2xl md:text-5xl font-bold bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
+                        <span>Top Facts</span>
+                    </div>
+                </div>
+            </div>
             <section className="text-gray-600 body-font">
-                <div className="container px-5 py-24 mx-auto">
+                <div className="container px-5 py-12 mx-auto">
                     <div className="flex flex-wrap -m-4">
                         <div className="p-4 md:w-1/3">
                             <div className="h-full border-2 border-gray-200 dark:border-gray-800 border-opacity-60 rounded-lg overflow-hidden">
